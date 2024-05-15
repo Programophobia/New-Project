@@ -1,7 +1,5 @@
 import styles from './textInput.module.scss'
 
-
-
 const TextInput = (props) => {
     return (<input className={styles.input} type="text" placeholder={props.placeholder} />);
 };

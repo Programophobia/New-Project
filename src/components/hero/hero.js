@@ -1,10 +1,13 @@
+import './hero.scss';
+
 const Hero = () => {
-    return (
-      <div>
-        <h1>My first React App</h1>
-        <p>A simple to-do app, with lists, columns and card</p>
-      </div>
-    );
-  };
+  return (
+    <div className="hero">
+      <h1 className="title">My first React App</h1>
+      <p className="subtitle">A simple to-do app, with lists, columns and card</p>
+    </div>
+  );
+};
+
 
   export default Hero;

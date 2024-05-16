@@ -4,7 +4,8 @@
 .columnForm {
     padding: 10px;
     text-align: center;
-    place-content: center
+    display: flex;
+    justify-content: center;
 }
 
 span {

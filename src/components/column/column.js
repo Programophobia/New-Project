@@ -1,14 +1,12 @@
-import styles from './column.module.scss'
-import Card from '../card/card.js'
-import CardForm from '../cardForm/cardForm.js'
-import { useSelector } from 'react-redux'
-
+import styles from './column.module.scss';
+import Card from '../card/card.js';
+import CardForm from '../cardForm/cardForm.js';
+import { useSelector } from 'react-redux';
+import { getFilteredCards } from '../../redux/store.js';
 
 const Column =(props)=>{
 
-    const searchString = useSelector(state => state.searchString);
-
-    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id && card.title.toLowerCase().includes(searchString.toLowerCase())))
+   const cards = useSelector(state => getFilteredCards(state, props.id))
     return <article className={styles.column}>
             <h2 className={styles.title}><span className={styles.icon + ' fa fa-' + props.icon} /> {props.title}</h2>
             <ul className={styles.cards}>

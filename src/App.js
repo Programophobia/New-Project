@@ -5,6 +5,7 @@ import Home from "./components/home/home.js";
 import Fav from "./components/fav/fav.js";
 import About from "./components/about/about.js";
 import { Routes, Route } from "react-router-dom";
+import ErrorBoundary from "./components/errorEl/errorEl.js";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path='/Favorite' element={<Fav />} />
           <Route path='/about' element={<About />} />
+          <Route path="*" element={<ErrorBoundary/>} />
           </Routes>
         </Container>
     </div>

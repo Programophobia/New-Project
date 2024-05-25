@@ -4,17 +4,22 @@ import Button from '../button/button.js';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { searchString } from '../../redux/store.js';
+import { useEffect } from 'react';
 
 const SearchForm = (props) => {
 const dispatch = useDispatch();
 const [title, setTitle] = useState('')
 
+useEffect(() => {
+    dispatch(searchString(''));
+  }, [] );
 
 
 const search = e => {
     e.preventDefault();
     dispatch(searchString(title));
     setTitle('');
+    searchString();
    
 }
 

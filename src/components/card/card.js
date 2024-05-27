@@ -7,7 +7,7 @@ const Card = (props) => {
     const dispatch = useDispatch();
     const handleAddFavorite = (event)=>{
         event.preventDefault();
-       dispatch.addCardFav(props.id)
+       dispatch(addCardFav(props.id))
     }
 
     return(

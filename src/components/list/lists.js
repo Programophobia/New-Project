@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import {getAllLists}  from '../../redux/store.js'
 import { Link } from "react-router-dom";
 import styles from './links.module.scss'
+import ListForm from "../addList/addList.js";
 
 const Lists =() => {
     const lists = useSelector(getAllLists)
@@ -14,6 +15,7 @@ const Lists =() => {
               <p>{list.description}</p>
             </Link>
           ))}
+          <ListForm />
         </section>
       );
 }
